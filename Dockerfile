@@ -19,7 +19,7 @@ RUN cd assets && yarn install
 
 COPY priv priv
 COPY assets assets
-RUN cd assets && yarn build deploy
+RUN cd assets && yarn build
 RUN mix phx.digest
 
 COPY lib lib
