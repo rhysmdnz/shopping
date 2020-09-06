@@ -5,7 +5,13 @@ import { Socket } from 'phoenix';
 
 
 const socket: Middleware = store => next => {
-    const socket = new Socket("ws://192.168.1.157:4000/socket")
+    let socketAddr;
+    if (process.env.NODE_ENV === 'production') {
+        socketAddr = "/socket"
+    } else {
+        socketAddr = "ws://localhost:4000/socket"
+    }
+    const socket = new Socket(socketAddr);
     socket.connect()
     let channel = socket.channel("shoppinglist", {})
     channel.join().receive('ok', async resp => {
