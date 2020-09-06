@@ -1,6 +1,6 @@
 FROM elixir:1.10.4-alpine AS build
 
-RUN apk add --no-cache build-base npm git python
+RUN apk add --no-cache build-base yarn git python
 
 WORKDIR /app
 
@@ -13,12 +13,13 @@ COPY mix.exs mix.lock ./
 COPY config config
 RUN mix do deps.get, deps.compile
 
-COPY assets/package.json assets/package-lock.json ./assets/
-RUN npm --prefix ./assets ci --progress=false --no-audit --loglevel=error
+COPY assets/package.json assets/yarn.lock assets/.yarnrc.yml ./assets/
+COPY assets/.yarn ./assets/.yarn
+RUN cd assets && yarn install
 
 COPY priv priv
 COPY assets assets
-RUN npm run --prefix ./assets deploy
+RUN cd assets && yarn build deploy
 RUN mix phx.digest
 
 COPY lib lib

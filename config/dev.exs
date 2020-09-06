@@ -21,11 +21,8 @@ config :shopping_elixir, ShoppingElixirWeb.Endpoint,
   code_reloader: true,
   check_origin: false,
   watchers: [
-    node: [
-      "node_modules/webpack/bin/webpack.js",
-      "--mode",
-      "development",
-      "--watch-stdin",
+    yarn: [
+      "start",
       cd: Path.expand("../assets", __DIR__)
     ]
   ]

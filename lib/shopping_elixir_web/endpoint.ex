@@ -23,9 +23,10 @@ defmodule ShoppingElixirWeb.Endpoint do
   plug Plug.Static,
     at: "/",
     from: :shopping_elixir,
-    gzip: false,
-    only:
-      ~w(css fonts images js static favicon.ico robots.txt manifest.json asset-manifest.json logo192.png logo512.png service-worker.js index.html)
+    gzip: false
+
+  # only:
+  #   ~w(css fonts images js static favicon.ico robots.txt manifest.json asset-manifest.json logo192.png logo512.png service-worker.js index.html)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

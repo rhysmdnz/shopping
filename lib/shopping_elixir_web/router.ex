@@ -13,12 +13,6 @@ defmodule ShoppingElixirWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ShoppingElixirWeb do
-    pipe_through :browser
-
-    get "/", PageController, :index
-  end
-
   # Other scopes may use custom stacks.
   # scope "/api", ShoppingElixirWeb do
   #   pipe_through :api
@@ -38,5 +32,11 @@ defmodule ShoppingElixirWeb.Router do
       pipe_through :browser
       live_dashboard "/dashboard", metrics: ShoppingElixirWeb.Telemetry
     end
+  end
+
+  scope "/", ShoppingElixirWeb do
+    pipe_through :browser
+
+    get "/*path", PageController, :index
   end
 end
