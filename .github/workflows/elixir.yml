@@ -41,6 +41,8 @@ jobs:
         restore-keys: ${{ runner.os }}-mix-
     - name: Install dependencies
       run: mix deps.get
+    - name: Install JS dependencies
+      run: npm ci
     - name: Build static assets
       run: npm run deploy --prefix ./assets
     - name: Run tests
