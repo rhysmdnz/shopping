@@ -30,6 +30,15 @@ config :shopping_elixir, ShoppingElixirWeb.Endpoint,
   ],
   secret_key_base: secret_key_base
 
+hostname =
+  System.get_env("SHOPPING_HOST") ||
+    raise """
+    environment variable SHOPPING_HOST is missing.
+    """
+
+config :shopping_elixir, ShoppingElixirWeb.Endpoint,
+  url: [host: hostname, port: 80],
+
 # ## Using releases (Elixir v1.9+)
 #
 # If you are doing OTP releases, you need to instruct Phoenix
