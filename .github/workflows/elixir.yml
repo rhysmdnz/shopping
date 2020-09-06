@@ -42,7 +42,7 @@ jobs:
     - name: Install dependencies
       run: mix deps.get
     - name: Install JS dependencies
-      run: npm ci
+      run: npm ci --prefix ./assets
     - name: Build static assets
       run: npm run deploy --prefix ./assets
     - name: Run tests
