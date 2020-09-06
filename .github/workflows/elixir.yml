@@ -34,8 +34,10 @@ jobs:
     - name: Restore dependencies cache
       uses: actions/cache@v2
       with:
-        path: deps
-        key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+        path: |
+          deps
+          assets/.yarn/cache
+        key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}-${{ hashFiles('**/yarn.lock') }}
         restore-keys: ${{ runner.os }}-mix-
     - name: Install dependencies
       run: mix deps.get
