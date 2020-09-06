@@ -1,5 +1,4 @@
 import { Middleware, PayloadAction, Action } from "@reduxjs/toolkit";
-import socketIOClient from "socket.io-client";
 import { ServerAction, replaceAll } from "../features/list/listSlice";
 import localforage from "localforage"
 import { Socket } from 'phoenix';
