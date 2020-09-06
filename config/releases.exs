@@ -36,7 +36,8 @@ hostname =
     environment variable SHOPPING_HOST is missing.
     """
 
-config :shopping_elixir, ShoppingElixirWeb.Endpoint, url: [host: hostname, port: 80]
+config :shopping_elixir, ShoppingElixirWeb.Endpoint,
+  url: [scheme: "https", host: hostname, port: 80]
 
 # ## Using releases (Elixir v1.9+)
 #
