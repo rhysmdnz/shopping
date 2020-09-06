@@ -10,7 +10,7 @@ updates:
     schedule:
       interval: "daily"
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/assets"
     schedule:
       interval: "daily"
   - package-ecosystem: "docker"
