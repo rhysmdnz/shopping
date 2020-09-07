@@ -1,12 +1,12 @@
-import { connect, ConnectedProps } from 'react-redux';
-import ShoppingList from '../components/ShoppingList';
-import { addItem, editItem, toggleItem } from '../features/list/listSlice';
-import { RootState } from '../reducers'
-import { Dispatch } from 'redux';
+import { connect, ConnectedProps } from "react-redux";
+import ShoppingList from "../components/ShoppingList";
+import { addItem, editItem, toggleItem } from "../features/list/listSlice";
+import { RootState } from "../reducers";
+import { Dispatch } from "redux";
 
 const mapStateToProps = (state: RootState) => {
   return {
-    items: state.items
+    items: state.items,
   };
 };
 
@@ -20,15 +20,13 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
     },
     onItemEdit: (id: string, value: string) => {
       dispatch(editItem(id, value));
-    }
+    },
   };
 };
 
-const connector = connect(mapStateToProps, mapDispatchToProps)
-export type Props = ConnectedProps<typeof connector>
+const connector = connect(mapStateToProps, mapDispatchToProps);
+export type Props = ConnectedProps<typeof connector>;
 
-const ShoppingListContainer = connector(
-  ShoppingList
-);
+const ShoppingListContainer = connector(ShoppingList);
 
 export default ShoppingListContainer;

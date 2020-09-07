@@ -17,10 +17,13 @@
     "@types/react-redux": "^7.1.9",
     "@types/socket.io-client": "^1.4.33",
     "@types/uuid": "^8.3.0",
+    "husky": "^4.2.5",
     "immer": "^7.0.8",
+    "lint-staged": "^10.3.0",
     "localforage": "^1.9.0",
     "notistack": "^1.0.0",
     "phoenix": "^1.5.4",
+    "prettier": "^2.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
@@ -50,5 +53,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

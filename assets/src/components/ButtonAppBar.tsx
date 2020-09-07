@@ -1,14 +1,14 @@
-import React from 'react';
-import AppBar from '@material-ui/core/AppBar'
-import { Props } from '../containers/ButtonAppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import MenuIcon from '@material-ui/icons/Menu';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import { useDispatch } from 'react-redux';
-import { enqueueSnackbar } from '../features/notifications/notificationsSlice';
+import React from "react";
+import AppBar from "@material-ui/core/AppBar";
+import { Props } from "../containers/ButtonAppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+import MenuIcon from "@material-ui/icons/Menu";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import { useDispatch } from "react-redux";
+import { enqueueSnackbar } from "../features/notifications/notificationsSlice";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,10 +22,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 const ButtonAppBar = (props: Props) => {
-  const classes = useStyles()
-  const dispatch = useDispatch()
+  const classes = useStyles();
+  const dispatch = useDispatch();
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -40,12 +39,21 @@ const ButtonAppBar = (props: Props) => {
           <Typography variant="h6" color="inherit" className={classes.title}>
             Shopping
           </Typography>
-          <Typography color="inherit">{props.connected ? "Connected" : "Connecting"}</Typography>
-          <Button color="inherit" onClick={() => { dispatch(enqueueSnackbar({ message: "We clicked the thing" })) }}>Login</Button>
+          <Typography color="inherit">
+            {props.connected ? "Connected" : "Connecting"}
+          </Typography>
+          <Button
+            color="inherit"
+            onClick={() => {
+              dispatch(enqueueSnackbar({ message: "We clicked the thing" }));
+            }}
+          >
+            Login
+          </Button>
         </Toolbar>
       </AppBar>
-    </div >
-  )
+    </div>
+  );
 };
 
 export default ButtonAppBar;
