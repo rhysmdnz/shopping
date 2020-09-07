@@ -23,7 +23,8 @@ defmodule ShoppingElixirWeb.Endpoint do
   plug Plug.Static,
     at: "/",
     from: :shopping_elixir,
-    gzip: false
+    gzip: true,
+    brotli: true
 
   # only:
   #   ~w(css fonts images js static favicon.ico robots.txt manifest.json asset-manifest.json logo192.png logo512.png service-worker.js index.html)
