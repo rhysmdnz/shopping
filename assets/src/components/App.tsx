@@ -7,6 +7,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
+import Notifier from '../features/notifications/Notifier'
+import { SnackbarProvider } from 'notistack';
+
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -24,13 +27,16 @@ function App() {
   const classes = useStyles()
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <ButtonAppBarContainer />
-      <Container maxWidth="sm">
-        <Paper className={classes.content} elevation={1}>
-          <ShoppingListContainer />
-        </Paper>
-      </Container>
+      <SnackbarProvider maxSnack={1} hideIconVariant>
+        <CssBaseline />
+        <Notifier />
+        <ButtonAppBarContainer />
+        <Container maxWidth="sm">
+          <Paper className={classes.content} elevation={1}>
+            <ShoppingListContainer />
+          </Paper>
+        </Container>
+      </SnackbarProvider>
     </ThemeProvider>
   );
 }

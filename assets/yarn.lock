@@ -4125,7 +4125,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^1.0.4":
+"clsx@npm:^1.0.4, clsx@npm:^1.1.0":
   version: 1.1.1
   resolution: "clsx@npm:1.1.1"
   checksum: d8ae10ac0546da19fe8c9516886f6582a64a382cf4d09ea7d36d5287cafbdab1192ab249adc2cdf0310e0b0aeac4f4142cf7c738c98d9cb68c19ba24b6f673d5
@@ -7218,7 +7218,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"immer@npm:^7.0.3":
+"immer@npm:^7.0.3, immer@npm:^7.0.8":
   version: 7.0.8
   resolution: "immer@npm:7.0.8"
   checksum: 7fdd7e33c019e72a79a36ac1ff397f5a2e897a29bc97b27e4d2a10b669bc59defbc97730ebba929dee11e23ca14abf02381a68528bdce5369c3a8320984cbec0
@@ -9812,6 +9812,20 @@ fsevents@^1.2.7:
   version: 3.3.0
   resolution: "normalize-url@npm:3.3.0"
   checksum: 5704115f74833cf157a5f104477d9c8e8b4e2c00275624159bcd3c65dbdac93db4f6f008f91364d0f20f93655bd2b643afa9e8875c67b4ab8673cd1dd0fb7a5c
+  languageName: node
+  linkType: hard
+
+"notistack@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "notistack@npm:1.0.0"
+  dependencies:
+    clsx: ^1.1.0
+    hoist-non-react-statics: ^3.3.0
+  peerDependencies:
+    "@material-ui/core": ^4.0.0
+    react: ^16.8.0
+    react-dom: ^16.8.0
+  checksum: c02380a1456c9ce1d8cdb01512b4ec2d35e79b7ec0c3e3c757edafd005e077cd238ff5a5e10a60692f8bdc14c16959fea5419fba798c72a0ec74033875d81180
   languageName: node
   linkType: hard
 
@@ -12988,7 +13002,9 @@ resolve@1.15.0:
     "@types/react-redux": ^7.1.9
     "@types/socket.io-client": ^1.4.33
     "@types/uuid": ^8.3.0
+    immer: ^7.0.8
     localforage: ^1.9.0
+    notistack: ^1.0.0
     phoenix: ^1.5.4
     react: ^16.13.1
     react-dom: ^16.13.1

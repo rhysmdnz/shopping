@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { useDispatch } from 'react-redux';
+import { enqueueSnackbar } from '../features/notifications/notificationsSlice';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ButtonAppBar = (props: Props) => {
   const classes = useStyles()
+  const dispatch = useDispatch()
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -38,10 +41,10 @@ const ButtonAppBar = (props: Props) => {
             Shopping
           </Typography>
           <Typography color="inherit">{props.connected ? "Connected" : "Connecting"}</Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" onClick={() => { dispatch(enqueueSnackbar({ message: "We clicked the thing" })) }}>Login</Button>
         </Toolbar>
       </AppBar>
-    </div>
+    </div >
   )
 };
 
