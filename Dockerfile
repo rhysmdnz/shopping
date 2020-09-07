@@ -35,8 +35,9 @@ RUN chown nobody:nobody /app
 
 USER nobody:nobody
 
+COPY --chown=nobody:nobody entrypoint.sh ./
 COPY --from=build --chown=nobody:nobody /app/_build/prod/rel/shopping_elixir ./
 
 ENV HOME=/app
 
-CMD ["bin/shopping_elixir", "start"]
+CMD ["sh", "entrypoint.sh"]

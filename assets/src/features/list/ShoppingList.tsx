@@ -1,12 +1,14 @@
 import React from "react";
 import ShoppingListItem from "./ShoppingListItem";
-import { makeStyles } from "@material-ui/core/styles";
-import { Props } from "../containers/ShoppingListContainer";
+import makeStyles from "@material-ui/core/styles/makeStyles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import Input from "@material-ui/core/Input";
 import AddIcon from "@material-ui/icons/Add";
+import { useDispatch } from "react-redux";
+import { useTypedSelector } from "../../reducers";
+import { addItem, toggleItem, removeItem } from "./listSlice";
 
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -19,8 +21,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ShoppingList = ({ items, onItemClick, onItemEdit, onItemAdd }: Props) => {
+const ShoppingList = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const items = useTypedSelector((store) => store.items);
   return (
     <List className={classes.root}>
       <ListItem role={undefined}>
@@ -32,7 +36,7 @@ const ShoppingList = ({ items, onItemClick, onItemEdit, onItemAdd }: Props) => {
           disableUnderline={true}
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
             if (e.key === "Enter") {
-              onItemAdd(e.currentTarget.value);
+              dispatch(addItem(e.currentTarget.value));
               e.currentTarget.value = "";
             }
           }}
@@ -45,12 +49,11 @@ const ShoppingList = ({ items, onItemClick, onItemEdit, onItemAdd }: Props) => {
             key={item.id}
             checked={item.checked}
             value={item.value}
-            onClick={(event, checked) => onItemClick(item.id, checked)}
-            onEdit={(event) => onItemEdit(item.id, event.target.value)}
+            onClick={(checked) => dispatch(toggleItem(item.id, checked))}
+            onRemove={() => dispatch(removeItem(item.id))}
           />
         );
       })}
-      {/* <ShoppingListItem onEdit={event => onItemAdd(event.target.value)} /> */}
     </List>
   );
 };

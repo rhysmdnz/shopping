@@ -39,17 +39,7 @@ const socket: Middleware = (store) => (next) => {
   channel.onError((resp) => {
     store.dispatch({ type: "socketio/reconnecting" });
   });
-  channel.on("items/toggleItem", (action: PayloadAction<ServerAction>) => {
-    console.log(action);
-    action.payload.meta.send = false;
-    store.dispatch(action);
-  });
-  channel.on("items/addItem", (action: PayloadAction<ServerAction>) => {
-    console.log(action);
-    action.payload.meta.send = false;
-    store.dispatch(action);
-  });
-  channel.on("items/editItem", (action: PayloadAction<ServerAction>) => {
+  channel.on("action", (action: PayloadAction<ServerAction>) => {
     console.log(action);
     action.payload.meta.send = false;
     store.dispatch(action);

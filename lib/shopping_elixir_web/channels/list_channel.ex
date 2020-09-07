@@ -4,40 +4,92 @@ import Ecto.Query, only: [from: 2]
 defmodule ShoppingElixirWeb.ListChannel do
   use Phoenix.Channel
 
+  alias ShoppingElixir.Item
+  alias ShoppingElixir.Repo
+
   def join("shoppinglist", _message, socket) do
     {:ok, socket}
   end
 
   def handle_in("items/addItem", %{"payload" => payload, "type" => type}, socket) do
-    changeset = ShoppingElixir.Item.changeset(%ShoppingElixir.Item{}, payload)
+    changeset = Item.changeset(%Item{}, payload)
 
-    if changeset.valid? do
-      ShoppingElixir.Repo.insert!(changeset)
-      broadcast_from!(socket, "items/addItem", %{payload: payload, type: type})
+    case Repo.insert(changeset) do
+      {:ok, _item} ->
+        broadcast_from!(socket, "action", %{payload: payload, type: type})
+
+      _ ->
+        nil
     end
 
-    {:noreply, socket}
+    {:reply, :ok, socket}
   end
 
   def handle_in("items/toggleItem", %{"payload" => payload, "type" => type}, socket) do
-    item = ShoppingElixir.Repo.get!(ShoppingElixir.Item, payload["id"])
-    changeset = ShoppingElixir.Item.changeset(item, %{"checked" => payload["checked"]})
+    {:ok, time, _} = DateTime.from_iso8601(payload["updated"])
 
-    if changeset.valid? do
-      ShoppingElixir.Repo.update!(changeset)
-      broadcast_from!(socket, "items/toggleItem", %{payload: payload, type: type})
+    item = Repo.one(from i in Item, where: i.id == ^payload["id"] and i.updated < ^time)
+
+    case item do
+      nil ->
+        nil
+
+      item ->
+        changeset =
+          Item.changeset(item, %{"checked" => payload["checked"], "updated" => payload["updated"]})
+
+        case Repo.update(changeset) do
+          {:ok, _item} ->
+            broadcast_from!(socket, "action", %{payload: payload, type: type})
+
+          _ ->
+            nil
+        end
     end
 
-    {:noreply, socket}
+    {:reply, :ok, socket}
   end
 
   def handle_in("items/editItem", %{"payload" => payload, "type" => type}, socket) do
-    broadcast_from!(socket, "items/editItem", %{payload: payload, type: type})
-    {:noreply, socket}
+    item = Repo.get(Item, payload["id"])
+
+    case item do
+      nil ->
+        nil
+
+      item ->
+        changeset =
+          Item.changeset(item, %{"value" => payload["value"], "updated" => payload["updated"]})
+
+        case Repo.update(changeset) do
+          {:ok, _item} ->
+            broadcast_from!(socket, "action", %{payload: payload, type: type})
+
+          _ ->
+            nil
+        end
+    end
+
+    {:reply, :ok, socket}
+  end
+
+  def handle_in("items/removeItem", %{"payload" => payload, "type" => type}, socket) do
+    item = Repo.get(Item, payload["id"])
+
+    case item do
+      nil ->
+        nil
+
+      item ->
+        Repo.delete!(item)
+        broadcast_from!(socket, "action", %{payload: payload, type: type})
+    end
+
+    {:reply, :ok, socket}
   end
 
   def handle_in("items/fullList", _, socket) do
-    items = ShoppingElixir.Repo.all(from i in ShoppingElixir.Item, order_by: i.created)
+    items = ShoppingElixir.Repo.all(from i in Item, order_by: i.created)
 
     resp = %{
       "list" => Enum.map(items, fn i -> i.id end),
@@ -47,14 +99,12 @@ defmodule ShoppingElixirWeb.ListChannel do
             "id" => i.id,
             "value" => i.value,
             "checked" => i.checked,
-            "created" => DateTime.to_iso8601(i.created)
+            "created" => DateTime.to_iso8601(i.created),
+            "updated" => DateTime.to_iso8601(i.updated)
           })
-        end),
-      "updated" => DateTime.to_iso8601(DateTime.now!("Etc/UTC"))
+        end)
     }
 
-    # IEx.pry()
-    # broadcast_from!(socket, "items/editItem", %{payload: payload, type: type})
     {:reply, {:ok, resp}, socket}
   end
 end

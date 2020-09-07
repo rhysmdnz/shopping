@@ -1,6 +1,6 @@
 import React from "react";
 import ButtonAppBarContainer from "../containers/ButtonAppBar";
-import ShoppingListContainer from "../containers/ShoppingListContainer";
+import ShoppingList from "../features/list/ShoppingList";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
@@ -32,7 +32,7 @@ function App() {
         <ButtonAppBarContainer />
         <Container maxWidth="sm">
           <Paper className={classes.content} elevation={1}>
-            <ShoppingListContainer />
+            <ShoppingList />
           </Paper>
         </Container>
       </SnackbarProvider>

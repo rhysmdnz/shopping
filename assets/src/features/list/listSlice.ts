@@ -26,16 +26,20 @@ interface ToggleItem extends ServerAction {
   updated: string;
 }
 
+interface RemoveItem extends ServerAction {
+  id: string;
+}
+
 interface Item {
   id: string;
   value: string;
   checked: boolean;
   created: string;
+  updated: string;
 }
 
 interface ShoppingListState {
   list: string[];
-  updated: string;
   items: {
     [id: string]: Item;
   };
@@ -46,7 +50,6 @@ let now = () => new Date().toISOString();
 const initialState: ShoppingListState = {
   list: [],
   items: {},
-  updated: new Date().toISOString(),
 };
 
 const listSlice = createSlice({
@@ -61,9 +64,9 @@ const listSlice = createSlice({
           value: value,
           checked: false,
           created: created,
+          updated: updated,
         };
         state.list.push(id);
-        state.updated = updated;
       },
       prepare(value: string) {
         return {
@@ -81,7 +84,7 @@ const listSlice = createSlice({
       reducer(state, action: PayloadAction<EditItem>) {
         const { id, value, updated } = action.payload;
         state.items[id].value = value;
-        state.updated = updated;
+        state.items[id].updated = updated;
       },
       prepare(id: string, value: string) {
         return {
@@ -98,7 +101,7 @@ const listSlice = createSlice({
       reducer(state, action: PayloadAction<ToggleItem>) {
         const { id, checked, updated } = action.payload;
         state.items[id].checked = checked;
-        state.updated = updated;
+        state.items[id].updated = updated;
       },
       prepare(id: string, checked: boolean) {
         return {
@@ -111,14 +114,35 @@ const listSlice = createSlice({
         };
       },
     },
+    removeItem: {
+      reducer(state, action: PayloadAction<RemoveItem>) {
+        const { id } = action.payload;
+        delete state.items[id];
+        const index = state.list.indexOf(id);
+        state.list.splice(index, 1);
+      },
+      prepare(id: string) {
+        return {
+          payload: {
+            id: id,
+            meta: { send: true },
+          },
+        };
+      },
+    },
     replaceAll(state, action: PayloadAction<ShoppingListState>) {
       state.items = action.payload.items;
       state.list = action.payload.list;
-      state.updated = action.payload.updated;
     },
   },
 });
 
-export const { addItem, editItem, toggleItem, replaceAll } = listSlice.actions;
+export const {
+  addItem,
+  editItem,
+  toggleItem,
+  removeItem,
+  replaceAll,
+} = listSlice.actions;
 
 export default listSlice.reducer;
