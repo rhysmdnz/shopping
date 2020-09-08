@@ -2,12 +2,27 @@ version: '3.4'
 services:
   db:
     image: postgres
-    ports:
-      - "5432:5432"
+    networks:
+      - database
     volumes:
       - type: volume
         source: database
         target: /var/lib/postgres
 
+  elixir:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:4000:4000"
+    networks:
+      - database
+    volumes:
+      - .:/app
+
 volumes:
+  database:
+
+networks:
   database:

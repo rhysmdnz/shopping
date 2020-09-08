@@ -5,7 +5,7 @@ config :shopping_elixir, ShoppingElixir.Repo,
   username: "postgres",
   password: "postgres",
   database: "shopping_elixir_dev",
-  hostname: "localhost",
+  hostname: "db",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 

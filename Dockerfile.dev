@@ -1,0 +1,14 @@
+FROM elixir:1.10.4-alpine
+
+RUN apk add --no-cache build-base yarn git inotify-tools
+
+RUN adduser -D -g '' shopping
+
+USER shopping:shopping
+
+WORKDIR /app
+
+COPY --chown=shopping:shopping . /app
+
+RUN mix local.hex --force && \
+    mix local.rebar --force
