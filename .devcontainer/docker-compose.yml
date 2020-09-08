@@ -1,9 +1,0 @@
-version: '3.4'
-services:
-  elixir:
-    build:
-      context: .
-    volumes:
-      - .:/app:cached
-    command: /bin/sh -c "while true; do sleep 1000s; done"
- 

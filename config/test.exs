@@ -9,7 +9,7 @@ config :shopping_elixir, ShoppingElixir.Repo,
   username: "postgres",
   password: "postgres",
   database: "shopping_elixir_test#{System.get_env("MIX_TEST_PARTITION")}",
-  hostname: "db",
+  hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
 # We don't run a server during test. If one is required,
