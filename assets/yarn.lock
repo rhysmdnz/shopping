@@ -2282,12 +2282,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:16.9.11":
-  version: 16.9.11
-  resolution: "@types/react-dom@npm:16.9.11"
+"@types/react-dom@npm:17.0.1":
+  version: 17.0.1
+  resolution: "@types/react-dom@npm:17.0.1"
   dependencies:
-    "@types/react": ^16
-  checksum: b22a7ac54aa140a96ad87194df51d3241042e5c68a5c8e17f62f0c97a5857b1cd5d1317902acb65bf7079af3c9baaec356a185b9d97cd257e44f97cc1ca16c46
+    "@types/react": "*"
+  checksum: 695dd4bbef4fabdc726359e4031b2887b913d65fb2ff59e5a9e81f9ae20ca4dd8f2b6fe1f39fa5c1197babdb86f6b81b385f5d4438536f2ceeb5ff136102f45b
   languageName: node
   linkType: hard
 
@@ -2329,16 +2329,6 @@ __metadata:
     "@types/prop-types": "*"
     csstype: ^3.0.2
   checksum: de1cd27ce57a961379978f83676d60d88bf729337683d1d4cb22dd8f285ed4200db19f7243052dc67c80133fe6798da1497456fe6f67a5bba5f5e30ce2544bfa
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^16":
-  version: 16.14.4
-  resolution: "@types/react@npm:16.14.4"
-  dependencies:
-    "@types/prop-types": "*"
-    csstype: ^3.0.2
-  checksum: f994d97aa05233e4f62cd42940ea4290ef1f9a8f3eb0ebda1ea39ed7ae20a16fff7ae1948952dce215b580c2a439fbf451556601be97ebe53a22dbce8a4e31a4
   languageName: node
   linkType: hard
 
@@ -13371,7 +13361,7 @@ resolve@1.15.0:
     "@types/node": 14.14.27
     "@types/phoenix": 1.5.1
     "@types/react": 17.0.2
-    "@types/react-dom": 16.9.11
+    "@types/react-dom": 17.0.1
     "@types/react-redux": 7.1.16
     "@types/socket.io-client": 1.4.35
     "@types/uuid": 8.3.0
