@@ -2261,10 +2261,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/phoenix@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@types/phoenix@npm:1.5.0"
-  checksum: 73e72f51c0acb0091e9c0592db3a787ae23ce00cb2577ef6ba253dc5592f93c087552bcd545b8498b72dffece224a9fbe8593b20a98772b091ffc6deb6311569
+"@types/phoenix@npm:1.5.1":
+  version: 1.5.1
+  resolution: "@types/phoenix@npm:1.5.1"
+  checksum: 7784b34d74d7ecf8443612e39606617d38c1f457c08d2a4fcbe539bb561a7e56cc4ad6bbb137c4b78e9e0d104f0e00c15c4f338734388d334d7ce4881e24ee08
   languageName: node
   linkType: hard
 
@@ -10845,10 +10845,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"phoenix@npm:1.5.4":
-  version: 1.5.4
-  resolution: "phoenix@npm:1.5.4"
-  checksum: c67e0d22690c5411a46c161026f331e1356d3908e7bbe0d6f0e4ca95a67cb9f4abd23daa677b51ddd70f589efbe74b4508276e0de6600676029704a810feb0c2
+"phoenix@npm:1.5.7":
+  version: 1.5.7
+  resolution: "phoenix@npm:1.5.7"
+  checksum: 8980894ab65bee41449ab13ce68669bdfac2fee1df90c7b884a7aa1542d49765980b92de2eaae5c4bade827f805010df10bbbe1eb782f9ebcfa828a1e1cd3321
   languageName: node
   linkType: hard
 
@@ -13364,7 +13364,7 @@ resolve@1.15.0:
     "@testing-library/user-event": 12.7.0
     "@types/jest": 26.0.20
     "@types/node": 14.14.27
-    "@types/phoenix": 1.5.0
+    "@types/phoenix": 1.5.1
     "@types/react": 16.14.4
     "@types/react-dom": 16.9.11
     "@types/react-redux": 7.1.9
@@ -13375,7 +13375,7 @@ resolve@1.15.0:
     lint-staged: 10.5.4
     localforage: 1.9.0
     notistack: 1.0.3
-    phoenix: 1.5.4
+    phoenix: 1.5.7
     prettier: 2.1.1
     react: 16.13.1
     react-dom: 16.13.1
