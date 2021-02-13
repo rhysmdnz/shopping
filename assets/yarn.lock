@@ -13368,7 +13368,7 @@ resolve@1.15.0:
     react-scripts: 3.4.4
     redux: 4.0.5
     redux-persist: 6.0.0
-    typescript: 3.7.5
+    typescript: 3.9.9
     uuid: 8.3.0
   languageName: unknown
   linkType: soft
@@ -14491,23 +14491,23 @@ resolve@1.15.0:
   languageName: node
   linkType: hard
 
-typescript@3.7.5:
-  version: 3.7.5
-  resolution: "typescript@npm:3.7.5"
+typescript@3.9.9:
+  version: 3.9.9
+  resolution: "typescript@npm:3.9.9"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 48a96fb7dc48746e6b76cf0946545181b0d5013368e510768402f1374e6c6a9f29b00e8ca4f40bc7523a655473f7bc7c55d1c8458970e96b7187bcee1b47e96b
+  checksum: 22bbe953faa34903587f3bd8fb6c343d754745d4177e49da523a2a3b814fe5eaf60d9b23c2d401d038a08a5ac2d8094b268ba75adee840cc2358fb5a866624ab
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@3.7.5#builtin<compat/typescript>":
-  version: 3.7.5
-  resolution: "typescript@patch:typescript@npm%3A3.7.5#builtin<compat/typescript>::version=3.7.5&hash=5b02a2"
+"typescript@patch:typescript@3.9.9#builtin<compat/typescript>":
+  version: 3.9.9
+  resolution: "typescript@patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=5b02a2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: cf3413606dfe8a8c8e08392afe1f52975541b900ad407bc072279ad27b57ce4939eac389e74477bb0f8747122cf3442b944023ddfd87143d3b9ea3122fff40ad
+  checksum: a57cc051e94bd7f6344165a3318fa27d094c1a59822e6028aaa7c07628d5765dc0a850f2d92db32b988331a1abe51593bf1d217798b710ee3a1ff4b995888fd2
   languageName: node
   linkType: hard
 
