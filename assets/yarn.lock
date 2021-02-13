@@ -1879,15 +1879,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@reduxjs/toolkit@npm:1.4.0":
-  version: 1.4.0
-  resolution: "@reduxjs/toolkit@npm:1.4.0"
+"@reduxjs/toolkit@npm:1.5.0":
+  version: 1.5.0
+  resolution: "@reduxjs/toolkit@npm:1.5.0"
   dependencies:
-    immer: ^7.0.3
+    immer: ^8.0.0
     redux: ^4.0.0
     redux-thunk: ^2.3.0
     reselect: ^4.0.0
-  checksum: d7ef94402868abedc497ee386089a14992c54e163dfc99ed0cf13de7e616f86748c0b9f0d7555e7685144aa8f10216b19e0dbcce5c2aeea1d753b45865545df3
+  checksum: 421f5e7534347b20692f7883393fd1338f903544de48feacef61e38ee9faffb4e61264129a60161b0d1b4c0ad0f8fee635b35ee343d7111f5d53e41ae778935f
   languageName: node
   linkType: hard
 
@@ -7359,17 +7359,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"immer@npm:8.0.1":
+"immer@npm:8.0.1, immer@npm:^8.0.0":
   version: 8.0.1
   resolution: "immer@npm:8.0.1"
   checksum: a8c8d531af8f968f4d5a2ec3c5eeb6dd6933c69d216b3f8c55275e34c87926d556db4e3d81f5f038e66f9886e874da4ab4f7ffe228e33d718593820e2f57b68f
-  languageName: node
-  linkType: hard
-
-"immer@npm:^7.0.3":
-  version: 7.0.8
-  resolution: "immer@npm:7.0.8"
-  checksum: 7fdd7e33c019e72a79a36ac1ff397f5a2e897a29bc97b27e4d2a10b669bc59defbc97730ebba929dee11e23ca14abf02381a68528bdce5369c3a8320984cbec0
   languageName: node
   linkType: hard
 
@@ -13294,7 +13287,7 @@ resolve@1.15.0:
   dependencies:
     "@material-ui/core": 4.11.0
     "@material-ui/icons": 4.9.1
-    "@reduxjs/toolkit": 1.4.0
+    "@reduxjs/toolkit": 1.5.0
     "@testing-library/jest-dom": 5.11.4
     "@testing-library/react": 11.0.2
     "@testing-library/user-event": 12.1.3
