@@ -1,6 +1,6 @@
 FROM elixir:1.10.4-alpine AS build
 
-RUN apk add --no-cache build-base yarn git python
+RUN apk add --no-cache build-base yarn git python3
 
 WORKDIR /app
 
