@@ -2322,7 +2322,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:16.14.4, @types/react@npm:^16":
+"@types/react@npm:17.0.2":
+  version: 17.0.2
+  resolution: "@types/react@npm:17.0.2"
+  dependencies:
+    "@types/prop-types": "*"
+    csstype: ^3.0.2
+  checksum: de1cd27ce57a961379978f83676d60d88bf729337683d1d4cb22dd8f285ed4200db19f7243052dc67c80133fe6798da1497456fe6f67a5bba5f5e30ce2544bfa
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^16":
   version: 16.14.4
   resolution: "@types/react@npm:16.14.4"
   dependencies:
@@ -13360,7 +13370,7 @@ resolve@1.15.0:
     "@types/jest": 26.0.20
     "@types/node": 14.14.27
     "@types/phoenix": 1.5.1
-    "@types/react": 16.14.4
+    "@types/react": 17.0.2
     "@types/react-dom": 16.9.11
     "@types/react-redux": 7.1.16
     "@types/socket.io-client": 1.4.35
