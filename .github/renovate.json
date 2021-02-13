@@ -3,5 +3,6 @@
     "config:base"
   ],
   "enabledManagers": ["npm"],
-  "rebaseWhen": "behind-base-branch"
+  "rebaseWhen": "behind-base-branch",
+  "prHourlyLimit": 0
 }
