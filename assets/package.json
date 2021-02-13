@@ -6,23 +6,10 @@
     "@material-ui/core": "4.11.3",
     "@material-ui/icons": "4.11.2",
     "@reduxjs/toolkit": "1.5.0",
-    "@testing-library/jest-dom": "5.11.9",
-    "@testing-library/react": "11.2.5",
-    "@testing-library/user-event": "12.7.0",
-    "@types/jest": "26.0.20",
-    "@types/node": "14.14.27",
-    "@types/phoenix": "1.5.1",
-    "@types/react": "17.0.2",
-    "@types/react-dom": "17.0.1",
-    "@types/react-redux": "7.1.16",
-    "@types/socket.io-client": "1.4.35",
-    "@types/uuid": "8.3.0",
     "immer": "8.0.1",
-    "lint-staged": "10.5.4",
     "localforage": "1.9.0",
     "notistack": "1.0.3",
     "phoenix": "1.5.7",
-    "prettier": "2.2.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-redux": "7.2.2",
@@ -57,5 +44,21 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "5.11.9",
+    "@testing-library/react": "11.2.5",
+    "@testing-library/user-event": "12.7.0",
+    "@types/jest": "26.0.20",
+    "@types/node": "14.14.27",
+    "@types/phoenix": "1.5.1",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.1",
+    "@types/react-redux": "7.1.16",
+    "@types/socket.io-client": "1.4.35",
+    "@types/uuid": "8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1"
   }
 }
