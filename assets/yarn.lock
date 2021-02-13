@@ -2282,12 +2282,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:16.9.8":
-  version: 16.9.8
-  resolution: "@types/react-dom@npm:16.9.8"
+"@types/react-dom@npm:16.9.11":
+  version: 16.9.11
+  resolution: "@types/react-dom@npm:16.9.11"
   dependencies:
-    "@types/react": "*"
-  checksum: 53a223c0266178bca9161301d18ee6199e8f75f88caed5c4601c5aaedaf4c68f03bd72f6aafa979254beb20759f0b68a542ce04295d704eb67ae179769c50813
+    "@types/react": ^16
+  checksum: b22a7ac54aa140a96ad87194df51d3241042e5c68a5c8e17f62f0c97a5857b1cd5d1317902acb65bf7079af3c9baaec356a185b9d97cd257e44f97cc1ca16c46
   languageName: node
   linkType: hard
 
@@ -2322,7 +2322,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:16.14.4":
+"@types/react@npm:16.14.4, @types/react@npm:^16":
   version: 16.14.4
   resolution: "@types/react@npm:16.14.4"
   dependencies:
@@ -13307,7 +13307,7 @@ resolve@1.15.0:
     "@types/node": 14.14.27
     "@types/phoenix": 1.5.0
     "@types/react": 16.14.4
-    "@types/react-dom": 16.9.8
+    "@types/react-dom": 16.9.11
     "@types/react-redux": 7.1.9
     "@types/socket.io-client": 1.4.33
     "@types/uuid": 8.3.0
