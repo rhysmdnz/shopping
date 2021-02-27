@@ -11201,9 +11201,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"notistack@npm:1.0.3":
-  version: 1.0.3
-  resolution: "notistack@npm:1.0.3"
+"notistack@npm:1.0.4":
+  version: 1.0.4
+  resolution: "notistack@npm:1.0.4"
   dependencies:
     clsx: ^1.1.0
     hoist-non-react-statics: ^3.3.0
@@ -11211,7 +11211,7 @@ fsevents@^1.2.7:
     "@material-ui/core": ^4.0.0
     react: ^16.8.0 || ^17.0.0
     react-dom: ^16.8.0 || ^17.0.0
-  checksum: 52a720ed18659b8d8b3bcbaf015a544db89c83ba74648c23d16478414e5a59284d48537fe8d0c0d4b7c0a8e897caacb212ce2310ae8d2002800868c89a0ebd7b
+  checksum: fa5bfae1b84cec57d0ca5ee719756d54ddcbcbe446163ced3c4d8bd834b1ea02c647da68a527272b8799b90ea8df1bbd3179fb81e59a64c376c28409f7b94651
   languageName: node
   linkType: hard
 
@@ -14579,7 +14579,7 @@ resolve@1.18.1:
     immer: 8.0.1
     lint-staged: 10.5.4
     localforage: 1.9.0
-    notistack: 1.0.3
+    notistack: 1.0.4
     phoenix: 1.5.7
     prettier: 2.2.1
     react: 17.0.1
