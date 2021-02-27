@@ -8,7 +8,7 @@
     "@reduxjs/toolkit": "1.5.0",
     "immer": "8.0.1",
     "localforage": "1.9.0",
-    "notistack": "1.0.3",
+    "notistack": "1.0.4",
     "phoenix": "1.5.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
