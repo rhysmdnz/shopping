@@ -11921,10 +11921,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"phoenix@npm:1.5.7":
-  version: 1.5.7
-  resolution: "phoenix@npm:1.5.7"
-  checksum: 8980894ab65bee41449ab13ce68669bdfac2fee1df90c7b884a7aa1542d49765980b92de2eaae5c4bade827f805010df10bbbe1eb782f9ebcfa828a1e1cd3321
+"phoenix@npm:1.5.8":
+  version: 1.5.8
+  resolution: "phoenix@npm:1.5.8"
+  checksum: 9528fb74f606cc341f39353fcc3f61adc3036b8e9f2a76c3f11abaf6a160a07c2c8a060a1476ecad2f949377d093897f7eeb2ffc06eb98c025a42e5cc4d48584
   languageName: node
   linkType: hard
 
@@ -14580,7 +14580,7 @@ resolve@1.18.1:
     lint-staged: 10.5.4
     localforage: 1.9.0
     notistack: 1.0.4
-    phoenix: 1.5.7
+    phoenix: 1.5.8
     prettier: 2.2.1
     react: 17.0.1
     react-dom: 17.0.1
