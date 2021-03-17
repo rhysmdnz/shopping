@@ -8464,6 +8464,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"immer@npm:8.0.2":
+  version: 8.0.2
+  resolution: "immer@npm:8.0.2"
+  checksum: 9ea45dbf692d73ce3cc67ed6e8b52ddebfaaae92d4c2bb5ba02e796c6a2e9703ff9cf5d926f7ac05130b62babb3c34b83b439782d8f2b6462318801d6f6de332
+  languageName: node
+  linkType: hard
+
 "import-cwd@npm:^2.0.0":
   version: 2.1.0
   resolution: "import-cwd@npm:2.1.0"
@@ -14567,7 +14574,7 @@ resolve@1.18.1:
     "@types/socket.io-client": 1.4.35
     "@types/uuid": 8.3.0
     eslint-config-react-app: 6.0.0
-    immer: 8.0.1
+    immer: 8.0.2
     lint-staged: 10.5.4
     localforage: 1.9.0
     notistack: 1.0.4
