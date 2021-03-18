@@ -2706,14 +2706,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:12.8.3":
-  version: 12.8.3
-  resolution: "@testing-library/user-event@npm:12.8.3"
+"@testing-library/user-event@npm:13.0.1":
+  version: 13.0.1
+  resolution: "@testing-library/user-event@npm:13.0.1"
   dependencies:
     "@babel/runtime": ^7.12.5
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: de7ec0222bc30f5b967c03298563c9c1fe2dc94e3d1ad94607df90f660f68d9c9686c25f59be4f049ab3cccc80080d6056b32d6851666afe3fbc35d9c384fb20
+  checksum: 48c061d4a218ad6e6dcbc4f366134f76bee83267110b02118a4629d37c5176782de47adb9f9d272589233a54e77c232b6bfb59a498a33de62803c2bb551e475d
   languageName: node
   linkType: hard
 
@@ -14564,7 +14564,7 @@ resolve@1.18.1:
     "@reduxjs/toolkit": 1.5.0
     "@testing-library/jest-dom": 5.11.9
     "@testing-library/react": 11.2.5
-    "@testing-library/user-event": 12.8.3
+    "@testing-library/user-event": 13.0.1
     "@types/jest": 26.0.21
     "@types/node": 14.14.35
     "@types/phoenix": 1.5.1
