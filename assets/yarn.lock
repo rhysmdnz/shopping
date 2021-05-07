@@ -3067,10 +3067,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/socket.io-client@npm:1.4.35":
-  version: 1.4.35
-  resolution: "@types/socket.io-client@npm:1.4.35"
-  checksum: 367bceb6edd3491898cf9eebbec9f6663737a470047573a262462f0492f7171a59fa79113f494dfdd4c37548d05e45284d88d8881a692417900b82df869c8ced
+"@types/socket.io-client@npm:1.4.36":
+  version: 1.4.36
+  resolution: "@types/socket.io-client@npm:1.4.36"
+  checksum: 0390cf533d40ae91742ac06ccef8ce6f519cda58c89ddf940af749f0d811744f7e2d450dc26056e4d70266a639866683a92b08e920eeb51453759862f5d9bae5
   languageName: node
   linkType: hard
 
@@ -14571,7 +14571,7 @@ resolve@1.18.1:
     "@types/react": 17.0.2
     "@types/react-dom": 17.0.1
     "@types/react-redux": 7.1.16
-    "@types/socket.io-client": 1.4.35
+    "@types/socket.io-client": 1.4.36
     "@types/uuid": 8.3.0
     eslint-config-react-app: 6.0.0
     immer: 8.0.2
