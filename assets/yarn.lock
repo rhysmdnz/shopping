@@ -2959,10 +2959,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:14.14.35":
-  version: 14.14.35
-  resolution: "@types/node@npm:14.14.35"
-  checksum: 0f6320bf5370d1ff82105fb7f26aa0658499c97d3ec78561e65b65724280244f281602541182b63470d2c8a98db22fbb4f91409c5c7c97da8c3bb8f97fbc5dbc
+"@types/node@npm:14.17.27":
+  version: 14.17.27
+  resolution: "@types/node@npm:14.17.27"
+  checksum: 22a2252ce98945d314890f688dc76b54d4a069e55b519ac66dddb5da27e126f5ff1a48777ccb9aa34aa47759de7561376b7a3b583391ca6899af4b11fcfc9bdd
   languageName: node
   linkType: hard
 
@@ -14566,7 +14566,7 @@ resolve@1.18.1:
     "@testing-library/react": 11.2.5
     "@testing-library/user-event": 13.0.1
     "@types/jest": 26.0.21
-    "@types/node": 14.14.35
+    "@types/node": 14.17.27
     "@types/phoenix": 1.5.1
     "@types/react": 17.0.2
     "@types/react-dom": 17.0.1
