@@ -13592,7 +13592,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"redux@npm:4.0.5, redux@npm:^4.0.0":
+"redux@npm:4.1.1":
+  version: 4.1.1
+  resolution: "redux@npm:4.1.1"
+  dependencies:
+    "@babel/runtime": ^7.9.2
+  checksum: 063e1d52588d62d438bb392975e57c0091c79f9abdbb8594c44c1680a73415280f6133c3d9cb3b116fe1ceb7e1aefb44775d6136b8bb6b9eb6a2c1a23e32a840
+  languageName: node
+  linkType: hard
+
+"redux@npm:^4.0.0":
   version: 4.0.5
   resolution: "redux@npm:4.0.5"
   dependencies:
@@ -14584,7 +14593,7 @@ resolve@1.18.1:
     react-dom: 17.0.1
     react-redux: 7.2.2
     react-scripts: 4.0.3
-    redux: 4.0.5
+    redux: 4.1.1
     redux-persist: 6.0.0
     typescript: 4.1.5
     uuid: 8.3.2
