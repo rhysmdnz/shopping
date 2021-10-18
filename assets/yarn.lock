@@ -8464,10 +8464,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"immer@npm:8.0.2":
-  version: 8.0.2
-  resolution: "immer@npm:8.0.2"
-  checksum: 9ea45dbf692d73ce3cc67ed6e8b52ddebfaaae92d4c2bb5ba02e796c6a2e9703ff9cf5d926f7ac05130b62babb3c34b83b439782d8f2b6462318801d6f6de332
+"immer@npm:9.0.6":
+  version: 9.0.6
+  resolution: "immer@npm:9.0.6"
+  checksum: 48c9b673ee0f3a05f0651f26c8ccdcbc034a47502dd26e716bd7bb301bcede194d1c5e895d4d6ec8d1e7bfb6444dd1056095b3f10e6c5e08cc3e798497a96531
   languageName: node
   linkType: hard
 
@@ -14574,7 +14574,7 @@ resolve@1.18.1:
     "@types/socket.io-client": 1.4.35
     "@types/uuid": 8.3.0
     eslint-config-react-app: 6.0.0
-    immer: 8.0.2
+    immer: 9.0.6
     lint-staged: 10.5.4
     localforage: 1.9.0
     notistack: 1.0.5
