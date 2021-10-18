@@ -2450,15 +2450,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@reduxjs/toolkit@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@reduxjs/toolkit@npm:1.5.0"
+"@reduxjs/toolkit@npm:1.6.2":
+  version: 1.6.2
+  resolution: "@reduxjs/toolkit@npm:1.6.2"
   dependencies:
-    immer: ^8.0.0
-    redux: ^4.0.0
+    immer: ^9.0.6
+    redux: ^4.1.0
     redux-thunk: ^2.3.0
     reselect: ^4.0.0
-  checksum: 421f5e7534347b20692f7883393fd1338f903544de48feacef61e38ee9faffb4e61264129a60161b0d1b4c0ad0f8fee635b35ee343d7111f5d53e41ae778935f
+  peerDependencies:
+    react: ^16.14.0 || ^17.0.0
+    react-redux: ^7.2.1
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-redux:
+      optional: true
+  checksum: baa69110011bcf964ad5b92df71672573b747785ad136067826fabc05870b74152d9df018ce599cc950083572a51bf7736d456fba35e95e10c39781c93413d01
   languageName: node
   linkType: hard
 
@@ -8457,7 +8465,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"immer@npm:8.0.1, immer@npm:^8.0.0":
+"immer@npm:8.0.1":
   version: 8.0.1
   resolution: "immer@npm:8.0.1"
   checksum: a8c8d531af8f968f4d5a2ec3c5eeb6dd6933c69d216b3f8c55275e34c87926d556db4e3d81f5f038e66f9886e874da4ab4f7ffe228e33d718593820e2f57b68f
@@ -8468,6 +8476,13 @@ fsevents@^1.2.7:
   version: 8.0.2
   resolution: "immer@npm:8.0.2"
   checksum: 9ea45dbf692d73ce3cc67ed6e8b52ddebfaaae92d4c2bb5ba02e796c6a2e9703ff9cf5d926f7ac05130b62babb3c34b83b439782d8f2b6462318801d6f6de332
+  languageName: node
+  linkType: hard
+
+"immer@npm:^9.0.6":
+  version: 9.0.6
+  resolution: "immer@npm:9.0.6"
+  checksum: 48c9b673ee0f3a05f0651f26c8ccdcbc034a47502dd26e716bd7bb301bcede194d1c5e895d4d6ec8d1e7bfb6444dd1056095b3f10e6c5e08cc3e798497a96531
   languageName: node
   linkType: hard
 
@@ -13602,6 +13617,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"redux@npm:^4.1.0":
+  version: 4.1.1
+  resolution: "redux@npm:4.1.1"
+  dependencies:
+    "@babel/runtime": ^7.9.2
+  checksum: 063e1d52588d62d438bb392975e57c0091c79f9abdbb8594c44c1680a73415280f6133c3d9cb3b116fe1ceb7e1aefb44775d6136b8bb6b9eb6a2c1a23e32a840
+  languageName: node
+  linkType: hard
+
 "regenerate-unicode-properties@npm:^8.2.0":
   version: 8.2.0
   resolution: "regenerate-unicode-properties@npm:8.2.0"
@@ -14561,7 +14585,7 @@ resolve@1.18.1:
   dependencies:
     "@material-ui/core": 4.11.3
     "@material-ui/icons": 4.11.2
-    "@reduxjs/toolkit": 1.5.0
+    "@reduxjs/toolkit": 1.6.2
     "@testing-library/jest-dom": 5.11.9
     "@testing-library/react": 11.2.5
     "@testing-library/user-event": 13.0.1
